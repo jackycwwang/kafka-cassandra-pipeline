@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "namespace": "com.glowdataskills.cassandra",
+  "doc": "The key schema for kafka topic ecommerce-orders",
+  "name": "Key",
+  "fields": [
+    {
+      "name": "order_id",
+      "type": "string"
+    },
+    {
+      "name": "customer_id",
+      "type": "string"
+    }
+  ]
+}

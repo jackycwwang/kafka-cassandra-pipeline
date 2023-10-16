@@ -1,0 +1,45 @@
+version: "3.1"
+
+services:
+  producer:
+    build: ./producer
+    container_name: producer
+    restart: on-failure
+    volumes:
+    command: ["python", "producer.py"]
+    environment:
+
+    depends_on:
+      # - consumer_1
+      # - consumer_2
+      # - consumer_3
+
+  # consumer_1:
+  #   build: ./consumer
+  #   restart: always
+  #   command:
+  #     - python
+  #     - consumer.py
+  #   environment:
+  #     CONSUMER_NAME: Consumer_1
+  #   volumes:
+
+  # consumer_2:
+  #   build: ./consumer
+  #   restart: always
+  #   command:
+  #     - python
+  #     - consumer.py
+  #   environment:
+  #     CONSUMER_NAME: Consumer_2
+  #   volumes:
+
+  # consumer_3:
+  #   build: ./consumer
+  #   restart: always
+  #   command:
+  #     - python
+  #     - consumer.py
+  #   environment:
+  #     CONSUMER_NAME: Consumer_3
+  #   volumes:
